@@ -1,0 +1,13 @@
+.home {
+  background-color: #1abc9c;
+  color: #fff;
+}
+.img-100 {
+  width: 15%;
+}
+
+.line {
+  width: 5rem;
+  height: 5px;
+  background: #fff;
+}

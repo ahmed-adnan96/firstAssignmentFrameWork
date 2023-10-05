@@ -1,0 +1,47 @@
+<section class="port py-5">
+  <div class="container">
+    <div class="title-portfolio py-4">
+      <h1 class="fw-bold py-3 text-center">portfolio component</h1>
+      <div class="fs-5 stars d-flex justify-content-center align-items-center">
+        <div class="line me-3"></div>
+        <i class="fa-solid fa-star"></i>
+        <div class="line ms-3"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div
+        *ngFor="let image of images; let i = index"
+        class="col-md-6 col-lg-4 gy-4"
+      >
+        <div class="m-auto position-relative pointer">
+          <img class="w-100" src="{{ image }}" alt="" />
+
+          <div
+            (click)="flag = false; imgLayer = image"
+            class="layer position-absolute d-flex justify-content-center align-items-center"
+          >
+            <i class="fa fa-plus display-1 text-white" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+      <div *ngFor="let image of images" class="col-md-6 col-lg-4 gy-4">
+        <div class="m-auto position-relative pointer">
+          <img class="w-100" src="{{ image }}" alt="" />
+          <div
+            (click)="flag = false; imgLayer = image"
+            class="layer position-absolute d-flex justify-content-center align-items-center"
+          >
+            <i class="fa fa-plus display-1 text-white" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    [class.d-none]="flag"
+    (click)="hideLayer($event.target, img)"
+    class="layer-fixed d-flex justify-content-center align-items-center"
+  >
+    <img #img [src]="imgLayer" alt="" />
+  </div>
+</section>

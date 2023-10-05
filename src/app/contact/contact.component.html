@@ -1,0 +1,71 @@
+<section class="contact">
+  <div class="container">
+    <div class="title-contact mb-3 py-4">
+      <h1 class="fw-bold py-3 text-center">Contact component</h1>
+      <div class="fs-5 stars d-flex justify-content-center align-items-center">
+        <div class="line me-3"></div>
+        <i class="fa-solid fa-star"></i>
+        <div class="line ms-3"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-m-12">
+        <div>
+          <label
+            for="userName"
+            class="position-relative top-0"
+            [class.top]="!userName.length"
+            >userName :</label
+          >
+          <input
+            id="userName"
+            class="form-control my-3 position-relative"
+            type="text"
+            [(ngModel)]="userName"
+            placeholder="userName"
+          />
+          <label
+            for="userAge"
+            class="position-relative top-0"
+            [class.top]="!userAge.length"
+            >userAge :</label
+          >
+          <input
+            id="userAge"
+            class="form-control my-3 position-relative"
+            type="text"
+            [(ngModel)]="userAge"
+            placeholder="userAge"
+          />
+          <label
+            for="userEmail"
+            class="position-relative top-0"
+            [class.top]="!userEmail.length"
+            >userEmail:</label
+          >
+          <input
+            id="userEmail"
+            class="form-control my-3 position-relative"
+            type="email"
+            [(ngModel)]="userEmail"
+            placeholder="userEmail"
+          />
+          <label
+            for="userPassword"
+            class="position-relative top-0"
+            [class.top]="!userPassword.length"
+            >userPassword:</label
+          >
+          <input
+            id="userEmail"
+            class="form-control my-3 position-relative"
+            type="password"
+            [(ngModel)]="userPassword"
+            placeholder="userPassword"
+          />
+          <button class="rounded-2 px-3 py-2 mb-5">send Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
